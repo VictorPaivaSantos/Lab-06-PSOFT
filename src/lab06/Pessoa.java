@@ -15,7 +15,6 @@ public class Pessoa {
 	private String profissao;
 	private String comorbidades;
 	protected PessoaState estadoPessoa;
-	private Date dataPrimeiraDose;
 	
 	public Pessoa(String nome, int cpf, Date dataDeNascimento, String endereco, String cartaoDoSus, String email, String telefone,
 			String profissao, String comorbidades) {
@@ -70,14 +69,6 @@ public class Pessoa {
 	        }
 	    }
 	    return idade;
-	}
-	
-	public int getDiasPDose() {
-		Calendar dataPDose = Calendar.getInstance();  
-	    dataPDose.setTime(this.dataPrimeiraDose); 
-	    Calendar hoje = Calendar.getInstance();  
-	    
-	    return hoje.get(Calendar.DAY_OF_YEAR) - dataPDose.get(Calendar.DAY_OF_YEAR);
 	}
 
 	public String getNome() {
